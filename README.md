@@ -3,12 +3,12 @@
 
 ### Data Structures:
 
-1. **`players` Array**:
-   - An array to store player information, including name and position.
+1. **`players` List**:
+   - An List to store player information, including name and position.
    - Example: `[{ name: 'Player 1', position: 1 }, { name: 'Player 2', position: 1 }]`
 
 2. **`currentPlayerIndex` Variable**:
-   - A variable to keep track of the index of the current player in the `players` array.
+   - A variable to keep track of the index of the current player in the `players` List.
    - Example: `0` (for Player 1), `1` (for Player 2)
 
 ### Game Rules and Logic:
@@ -41,9 +41,9 @@
 
 ## Choice of Data Structures and Reasoning
 
-1. **Array for Players**:
-   - **Data Structure Choice**: An array is chosen to represent players because it's a simple and effective way to store player information. Each player is represented by an object with attributes like their name and position.
-   - **Reasoning**: Arrays are an intuitive choice for handling a list of entities, and they make it easy to access and update player information during the game.
+1. * List for Players**:
+   - **Data Structure Choice**: An List is chosen to represent players because it's a simple and effective way to store player information. Each player is represented by an object with attributes like their name and position.
+   - **Reasoning**: Lists are an intuitive choice for handling a list of entities, and they make it easy to access and update player information during the game.
 
 2. **Current Player Index**:
    - **Data Structure Choice**: A variable (`currentPlayerIndex`) is used to track the current player's turn.
