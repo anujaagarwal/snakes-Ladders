@@ -38,8 +38,7 @@ const movePlayer = (player) => {
     do {
         diceRoll = rollDice();
         if (diceRoll === 6){
-            const dicer = rollDice();
-            diceRoll = diceRoll + dicer;
+            console.log(`${player.name} rolled a 6. They get to roll again.`);
             consecutiveSixCount++;
             if(consecutiveSixCount === 3){
                 diceRoll = 0; // Nullify the dice
@@ -48,7 +47,13 @@ const movePlayer = (player) => {
         } else {
             consecutiveSixCount=0;
         }
-        } while (diceRoll === 0);
+
+      
+          if (diceRoll !== 6) {
+            // Player rolled a number other than 6, so we exit the loop.
+            break;
+          }
+        } while (true);
         let newPosition = player.position + diceRoll;
     
         if (newPosition <= 100) {
@@ -74,7 +79,7 @@ const movePlayer = (player) => {
           console.log(result);
       
           if (currentPlayer.position === 100) {
-            console.log(`${currentPlayer.name} has won the game!`);
+            // console.log(`${currentPlayer.name} has won the game!`);
             break; // End the game
           }
       
